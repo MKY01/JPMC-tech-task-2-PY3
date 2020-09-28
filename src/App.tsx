@@ -43,6 +43,7 @@ class App extends Component<{}, IState> {
     let x = 0;
     const interval = setInterval (() => {
       DataStreamer.getData((serverResponds: ServerRespond[]) => {
+        //New data from server to update the state of the react app
         this.setState({
           data: serverResponds,
           showGraph: true,
